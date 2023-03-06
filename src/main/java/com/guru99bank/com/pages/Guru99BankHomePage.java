@@ -10,6 +10,7 @@ public class Guru99BankHomePage {
 		/*
 		 * @author : nksoftpune.com
 		 * */
+	WebDriver driver;
 	@FindBy(xpath = "//*[@style='color: green']")
 	private WebElement welcomemsg;
 	
@@ -19,6 +20,9 @@ public class Guru99BankHomePage {
 	
 	public String getWelcomeMsg() {
 		return welcomemsg.getText();
+	}
+	public String getHomePageTitle() {
+		return driver.getTitle();
 	}
 	
 }

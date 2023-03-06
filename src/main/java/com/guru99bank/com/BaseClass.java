@@ -7,8 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
 	public WebDriver driver;
-	public void openbrowser() throws IOException {
-		
+	public void openbrowser() throws IOException  {
 		driver = new FirefoxDriver();
 		driver.get(UtilityClass.getproeryfile("url"));
 	}

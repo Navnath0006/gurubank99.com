@@ -5,6 +5,8 @@
     <classes>
       <class name="com.guru99bank.com.Guru99BankTest">
         <methods>
+          <include name="verifytitleTest"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.guru99bank.com.Guru99BankTest -->

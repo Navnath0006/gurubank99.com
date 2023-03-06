@@ -2,7 +2,9 @@ package com.guru99bank.com;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -27,8 +29,15 @@ public class Guru99BankTest extends BaseClass {
 		page1.clickOnLoginBtn();
 		
 		String welcomemsg = page2.getWelcomeMsg();
-		Assert.assertEquals(welcomemsg, UtilityClass.getexceldata(1, 0));
-		
+		Assert.assertEquals(welcomemsg, UtilityClass.getexceldata(1, 0));	
+	}
+	
+	@Test
+	public void verifytitleTest() throws EncryptedDocumentException, IOException {
+		String acttitle = driver.getTitle();
+		//Reporter.log(acttitle,true);
+		Assert.assertEquals(acttitle, UtilityClass.getexceldata(2, 0));
+		Reporter.log("verified",true);
 	}
 	@AfterTest
 	public void teardown() {
