@@ -31,7 +31,6 @@ public class Guru99BankTest extends BaseClass {
 		String welcomemsg = page2.getWelcomeMsg();
 		Assert.assertEquals(welcomemsg, UtilityClass.getexceldata(1, 0));	
 	}
-	
 	@Test
 	public void verifytitleTest() throws EncryptedDocumentException, IOException {
 		String acttitle = driver.getTitle();
@@ -39,6 +38,7 @@ public class Guru99BankTest extends BaseClass {
 		Assert.assertEquals(acttitle, UtilityClass.getexceldata(2, 0));
 		Reporter.log("verified",true);
 	}
+	
 	@AfterTest
 	public void teardown() {
 		driver.quit();

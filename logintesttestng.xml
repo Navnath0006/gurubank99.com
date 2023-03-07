@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  
+  <!-- Test1 invalid uid and password  -->
+  <parameter name="username" value="sdgdsg"/>
+  <parameter name="password" value="sdgdsg"/>
+  
+  <!-- Test1 invalid uid and valid password  -->
+  <parameter name="username" value="sdgdsg"/>
+  <parameter name="password" value="Eqyvyda"/>
+  
+  <!-- Test1 valid uid and invalid password  -->
+  <parameter name="username" value="mngr482972"/>
+  <parameter name="password" value="gsdfhsfh"/>
+  
+    <classes>
+      <class name="com.guru99bank.com.Guru99BankLoginTest"/>
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
